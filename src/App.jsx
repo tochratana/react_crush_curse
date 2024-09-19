@@ -1,32 +1,35 @@
-import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { View } from "./components/page/About/View";
-import { Hero } from "./components/page/Home/Hero";
+import { createBrowserRouter } from "react-router-dom";
+import Navbar from "./components/mainComponent/Navbar";
+import Hero from "./page/Home/Hero";
+import LayoutRoot from "./layout/LayoutRoot";
+import Error from "./page/About/Error";
+import Data from "./page/About/Data";
+import Tab from "./components/compo/Tab";
+import Profile from "./page/About/tab/Profile";
 
-// const Home = () => {
-//   return (
-//     <>
-//       <h1>This is a home page</h1>
-//     </>
-//   );
-// };
-
-// const About = () => {
-//   return (
-//     <>
-//       <h1>This is a about page</h1>
-//     </>
-//   );
-// };
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Hero />} />
-        <Route path="/about" element={<View />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-export default App;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LayoutRoot />,
+    children: [
+      {
+        path: "/",
+        element: <Hero />,
+      },
+      {
+        path: "/about",
+        element: <Tab />,
+        children: [
+          {
+            path: "/about",
+            element: <Profile />,
+          },
+          {
+            path: "message",
+            element: <Error />,
+          },
+        ],
+      },
+    ],
+  },
+]);
