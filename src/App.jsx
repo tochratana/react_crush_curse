@@ -6,6 +6,9 @@ import Error from "./page/About/Error";
 import Data from "./page/About/Data";
 import Tab from "./components/compo/Tab";
 import Profile from "./page/About/tab/Profile";
+import ServicePage from "./service/ServicePage";
+import Login from "./components/auth/Login";
+import HomeExport from "./page/Home/homeExport";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +17,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Hero />,
+        element: <HomeExport />,
       },
       {
         path: "/about",
@@ -29,6 +32,14 @@ export const router = createBrowserRouter([
             element: <Error />,
           },
         ],
+      },
+      {
+        path: "/service",
+        element: <ServicePage />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

@@ -17,21 +17,22 @@ const Hero = () => {
             </h1>
 
             <p className="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+              We are have a lot of home for you find and give you a quaility
+              home for you, we are all so happy that you allow me to indroduct
+              our service
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <a
                 href="#"
-                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 sm:w-auto bg-primaryColor"
               >
                 Get Started
               </a>
 
               <a
                 href="#"
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 sm:w-auto"
               >
                 Learn More
               </a>
